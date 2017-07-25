@@ -143,6 +143,12 @@ export default Button;
 Checkout the [tests](https://github.com/bvic23/babel-plugin-functional-hmr/blob/master/lib/__tests__/plugin.test.js) for more examples.
 
 
+## Sources
+
+- [Babel Plugin Handbook](https://github.com/babel/babel/tree/master/packages/babel-types#babel-types)
+- [Babel Types](https://github.com/babel/babel/tree/master/packages/babel-types#babel-types)
+- [AST Explorer](https://astexplorer.net)
+
 ## License
 
 MIT, see [LICENSE.md](/LICENSE.md) for details.
