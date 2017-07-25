@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-functional-hmr",
-  "version": "1.0.10",
-  "description": "",
+  "version": "1.0.11",
+  "description": "HMR for functional components in React Native",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -9,7 +9,11 @@
     "lint:base": "eslint --ext .js --ext .jsx --ignore-path .gitignore",
     "lint": "yarn lint:base ."
   },
-  "keywords": [],
+  "keywords": ["react",
+    "react-native",
+    "hot-reload",
+    "hmr",
+    "functional-components"],
   "author": "bvic23",
   "license": "ISC",
   "devDependencies": {

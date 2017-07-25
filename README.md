@@ -1,0 +1,148 @@
+# babel-plugin-functional-hmr
+
+A [Babel](http://babeljs.io) plugin allows HMR for functional components in React Native.
+
+
+## Why?
+
+Hot module reload (HMR) has been [broken for functional components](https://github.com/facebook/react-native/issues/8465) in [React Native](http://www.reactnative.com). 
+
+The "hot loading" message appears, but the changes don't show up.
+
+
+## Installation
+
+In most cases, you should install `babel-plugin-functional-hmr` as a development dependency (with `--save-dev`).
+
+```sh
+npm install --save-dev babel-plugin-functional-hmr
+```
+
+or 
+
+```sh
+yarn add babel-plugin-functional-hmr -D
+```
+
+The transformation plugin is typically used only in development. See the examples below for more details.
+
+## Usage
+
+### Via `.babelrc` (Recommended)
+
+Add the following line to your `.babelrc` file:
+
+Without options:
+
+```json
+{
+  "plugins": ["functional-hmr"]
+}
+```
+
+With options:
+
+```json
+{
+  "plugins": [
+    ["functional-hmr"]
+  ]
+}
+```
+
+### Via CLI
+
+```sh
+babel --plugins functional-hmr script.js
+```
+
+### Via Node API
+
+```js
+require("babel-core").transform("code", {
+  plugins: ["functional-hmr"]
+});
+```
+
+## Technical details
+
+### Class
+The plugin does not transform components defined as classes, such as: 
+
+```js
+export default class Button extends Component {
+    render() {
+        return (
+            <TouchableNativeFeedback onPress={this.props.onPress}>
+                <Text style={{ color: 'green' }}>
+                    {this.props.title}
+                </Text>
+            </TouchableNativeFeedback>
+        );
+    }
+}
+```
+
+### Arrow functions
+The plugin transforms arrow expressions **if**:
+
+- it has `JSX` return
+- it has only one object parameter or no parameters
+
+It does not transform files located in `node_modules` folder.
+
+From:
+
+```js
+const Button = ({ children, onPress }) =>
+    <TouchableNativeFeedback onPress={onPress}>
+        <Text style={{ color: 'blue' }}>
+            {children}
+        </Text>
+    </TouchableNativeFeedback>;
+
+export default Button;
+```
+
+to:
+
+```js
+import reactTransform from 'react-transform-hmr';
+
+function wrapComponent(id, Component) {
+    const t = reactTransform({
+        components: {
+            [id]: {
+                displayName: id
+            }
+        },
+        locals: [module],
+        imports: [require("react")]
+    });
+    return t(Component, id);
+}
+
+class __Button extends require("react").Component {
+    render() {
+        const children = this.props.children,
+              onPress = this.props.onPress;
+        return (<TouchableNativeFeedback onPress={onPress}>
+        <Text style={{ color: 'blue' }}>
+            {children}
+        </Text>
+    </TouchableNativeFeedback>);
+    }
+
+}
+
+const Button = wrapComponent('Button', __Button);
+export default Button;
+```
+
+Checkout the tests for more examples.
+
+
+## License
+
+MIT, see [LICENSE.md](/LICENSE.md) for details.
+
