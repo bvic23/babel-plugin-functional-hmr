@@ -1,0 +1,7 @@
+node_modules
+*.log
+reset.sh
+yarn.lock
+lib/__tests__
+lib/__fixtures__
+.*

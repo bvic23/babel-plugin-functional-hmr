@@ -1,0 +1,37 @@
+{
+  "name": "babel-plugin-functional-hmr",
+  "version": "1.0.10",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch",
+    "lint:base": "eslint --ext .js --ext .jsx --ignore-path .gitignore",
+    "lint": "yarn lint:base ."
+  },
+  "keywords": [],
+  "author": "bvic23",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-config-react-app": "^1.0.5",
+    "eslint-import-resolver-babel-module": "^3.0.0",
+    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.4",
+    "prettier": "^1.5.3",
+    "prettier-eslint-cli": "^4.1.1"
+  },
+  "dependencies": {
+    "babel-plugin-syntax-jsx": "^6.18.0"
+  }
+}

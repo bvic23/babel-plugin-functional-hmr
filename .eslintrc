@@ -1,0 +1,50 @@
+{
+  "extends": [
+	"react-app",
+	"prettier",
+	"prettier/flowtype",
+	"prettier/react"
+  ],
+	"plugins": [
+		"prettier"
+	],
+	"globals": {
+		"deepFreeze": true,
+		"expect": true,
+		"getMockComponent": true,
+		"getMockStore": true,
+		"getReduxFormProps": true,
+		"getReactIntlSpies": true,
+		"makeGeneratorSnapshot": true,
+		"testReducer": true,
+		"render": true,
+		"mount": true,
+		"shallow": true
+	},
+  "rules": {
+		"camelcase": 0,
+		"eqeqeq": [ "error", "allow-null" ],
+		"new-cap": [ "error", { "capIsNew": false } ],
+		"no-console": [ "error", { "allow": [ "error" ] } ],
+		"no-var": "error",
+		"no-warning-comments": ["warn", { "terms": [ "todo", "fixme" ], "location": "anywhere" }],
+		"prettier/prettier": ["error", { "tabWidth": 4, "singleQuote": true, "printWidth": 120 }],
+		"react/display-name": "off",
+		"react/jsx-key": "error",
+		"react/jsx-no-comment-textnodes": "error",
+		"react/jsx-no-duplicate-props": "error",
+		"react/jsx-no-undef": "error",
+		"react/jsx-pascal-case": ["error", { "allowAllCaps": true }],
+		"react/no-string-refs": "error",
+		"react/prefer-es6-class": "error",
+		"react/prefer-stateless-function": "error",
+		"react/require-render-return": "error",
+		"react/self-closing-comp": "error",
+		"react/sort-prop-types": "error",
+		"jsx-a11y/href-no-hash": "off",
+		"no-underscore-dangle": 0,
+		"prefer-const": ["error", {
+	  	"destructuring": "any"
+	 	}]
+  }
+}
