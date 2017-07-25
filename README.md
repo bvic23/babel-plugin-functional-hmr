@@ -139,7 +139,7 @@ const Button = wrapComponent('Button', __Button);
 export default Button;
 ```
 
-Checkout the tests for more examples.
+Checkout the [tests](https://github.com/bvic23/babel-plugin-functional-hmr/blob/master/lib/__tests__/plugin.test.js) for more examples.
 
 
 ## License
