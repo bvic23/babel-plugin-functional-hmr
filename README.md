@@ -2,7 +2,7 @@
 
 A [Babel](http://babeljs.io) plugin allows HMR for functional components in React Native.
 
-![](https://github.com/bvic23/babel-plugin-functional-hmr/blob/master/demo.gif)
+![](https://raw.githubusercontent.com/bvic23/babel-plugin-functional-hmr/master/demo.gif)
 
 ## Why?
 
