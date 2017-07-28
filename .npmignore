@@ -5,3 +5,4 @@ yarn.lock
 lib/__tests__
 lib/__fixtures__
 .*
+demo.gif
