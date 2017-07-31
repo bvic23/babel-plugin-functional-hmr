@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-functional-hmr",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "HMR for functional components in React Native",
   "repository" : { 
     "type" : "git",
