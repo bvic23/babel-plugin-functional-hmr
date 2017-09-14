@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-functional-hmr",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "HMR for functional components in React Native",
   "repository" : { 
     "type" : "git",
@@ -23,9 +23,9 @@
     "hot-reload",
     "hmr",
     "functional-components"],
-  "author": "bvic23",
-  "license": "MIT",
-  "devDependencies": {
+    "author": "bvic23",
+    "license": "MIT",
+    "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
