@@ -65,6 +65,9 @@ require("babel-core").transform("code", {
 });
 ```
 
+### Important Note
+From [Issue #5](https://github.com/bvic23/babel-plugin-functional-hmr/issues/5#issuecomment-333309618): *"Editing the `.babelrc` won't actually change the setup, unless you start the packager with `yarn start --reset-cache` to clean the transform cache."*
+
 ## Technical details
 
 ### Class
