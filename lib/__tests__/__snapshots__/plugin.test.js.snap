@@ -16,6 +16,49 @@ Array [
 ]
 `;
 
+exports[`component wrapped in hoc 1`] = `
+Array [
+  "import { Text } from 'react-native';",
+  "import React from 'react';",
+  "",
+  "const withNumber = number => {",
+  "    return BaseComponent => {",
+  "        return props => <BaseComponent {...props} number={number} />;",
+  "    };",
+  "};",
+  "",
+  "import reactTransform from 'react-transform-hmr';",
+  "",
+  "function wrapComponent(id, Component) {",
+  "    const t = reactTransform({",
+  "        components: {",
+  "            [id]: {",
+  "                displayName: id",
+  "            }",
+  "        },",
+  "        locals: [module],",
+  "        imports: [require(\\"react\\")]",
+  "    });",
+  "    return t(Component, id);",
+  "}",
+  "",
+  "class __Test extends require(\\"react\\").Component {",
+  "    render() {",
+  "        let { number } = this.props;",
+  "        return (<Text>",
+  "            Test {number}",
+  "        </Text>);",
+  "    }",
+  "",
+  "}",
+  "",
+  "const Test = wrapComponent('Test', __Test);",
+  "",
+  "",
+  "export default withNumber(3)(Test);",
+]
+`;
+
 exports[`const with destructure in param, should change 1`] = `
 Array [
   "import { TouchableNativeFeedback, Text } from 'react-native';",
