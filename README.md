@@ -4,6 +4,10 @@ A [Babel](http://babeljs.io) plugin allows HMR for functional components in Reac
 
 ![](https://raw.githubusercontent.com/bvic23/babel-plugin-functional-hmr/master/demo.gif)
 
+## Limitations
+
+If you try to use [hooks](https://reactjs.org/docs/hooks-intro.html) in your source they won't work (you will get an "Hooks can only be called inside the body of a function component").
+
 ## Why?
 
 Hot module reload (HMR) has been [broken for functional components](https://github.com/facebook/react-native/issues/8465) in [React Native](http://www.reactnative.com). 
