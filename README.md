@@ -1,6 +1,6 @@
 # !!!444!!! THIS PLUGIN IS DEPRECATED. PLEASE DON'T USE IT WITH React 0.61 AND ABOVE
 
-React Native 0.61 fixes the problem with Fast Refresh, it would be great if this project could have a loud deprecation notice in README.
+React Native 0.61 fixes the problem with Fast Refresh.
 
 # babel-plugin-functional-hmr
 
