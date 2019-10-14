@@ -1,3 +1,7 @@
+# ⚠️⚠️⚠️ DEPRECATED ⚠️⚠️⚠️
+
+**DO NOT USE THIS PROJECT WITH REACT NATIVE 0.61 OR HIGHER.** The problems with hot reloading function components are solved in React Native 0.61. Read more about [Fast Refresh](https://facebook.github.io/react-native/blog/2019/09/18/version-0.61) in React Native 0.61.
+
 # babel-plugin-functional-hmr
 
 A [Babel](http://babeljs.io) plugin allows HMR for functional components in React Native.
